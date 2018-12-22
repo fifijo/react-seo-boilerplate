@@ -1,0 +1,42 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "React Minimal SEO friendly Boilerplate 2019",
+  "keywords": [
+    "React minimal boilerplate",
+    "webpack 4 react",
+    "webpack 4 babel 7 react 16+"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --mode development --hot",
+    "build": "webpack --mode production",
+    "bundle-report": "webpack-bundle-analyzer --port 4200 dist/stats.json"
+  },
+  "author": "Krzysztof Perzanowski",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.11"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.3.1"
+  }
+}
