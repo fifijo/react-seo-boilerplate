@@ -1,17 +1,21 @@
-# React 16.7+ SEO Friendly Boilerplate 2019
+# React SSR Boilerplate
 
-
-<a href="https://facebook.github.io/react/" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/react.svg" height="50" /></a> 
+<a href="https://facebook.github.io/react/" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/react.svg" height="50" /></a>
+<a href="https://react-redux.js.org" target="_blank"> <img src="https://redux.js.org/img/redux.svg" height="50" /> </a> 
 <a href="https://webpack.github.io" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/webpack.svg" height="50" /></a> 
 <a href="https://babeljs.io" target="_blank"> <img src="https://raw.githubusercontent.com/babel/logo/master/babel.png" height="50" /></a> 
 <a href="http://sass-lang.com/" target="_blank"> <img src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" height="50" /> </a>
+<a href="https://eslint.org/" target="_blank"> <img src="https://eslint.org/img/logo.svg" height="50" /> </a>
 
 ## Features
-
-- [Webpack 4](https://webpack.js.org/) to bundle your assets, styles & scripts
-- [React 16.7 +](https://reactjs.org/)
-- [Babel 7](https://babeljs.io/) a compiler used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript
-- [SASS](https://sass-lang.com/) is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- [React 16.7+](https://reactjs.org/) A JavaScript library for building user interfaces
+- [React Redux](https://react-redux.js.org/) A predictable state container for JavaScript apps.
+- [Redux Thunk](https://github.com/reduxjs/redux-thunk) Thunk middleware for Redux.
+- [Webpack 4](https://webpack.js.org/) To bundle your assets, styles & scripts
+- [Babel 7](https://babeljs.io/) A compiler used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript
+- [SASS](https://sass-lang.com/) Is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- [Express](https://expressjs.com/) Fast, unopinionated, minimalist web framework for Node.js
+- [ESLint](https://eslint.org/) The pluggable linting utility for JavaScript and JSX 
 
 ## Usage
 
@@ -26,8 +30,8 @@
 
 ### Development
 
-- `npm run dev` development server
+- `npm run dev` client & server
 - `npm run build` build
 - `npm run bundle-report` bundle analyzer
 
-Then visit `http://localhost:8080/` _- or a new browser windows popped-up already -_ to preview your new website
+Then visit `http://localhost:3000/` _- or a new browser windows popped-up already -_ to preview your website

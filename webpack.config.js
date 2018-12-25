@@ -1,74 +1,47 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin =  require('mini-css-extract-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const path = require('path')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-const miniCssPlugin = new MiniCssExtractPlugin({
-    filename: '[name].[hash].css',
-    chunkFilename:  '[id].[hash].css',
-})
-
-const htmlPlugin =  new HtmlWebPackPlugin({
-    template: "./src/index.html",
-    filename: "index.html"
-})
-
-module.exports  = (env,argv) => {
-
-  return {
-    devServer: {
-        headers: { 'Access-Control-Allow-Origin': '*' },
-        https:  false,
-        disableHostCheck: true,
-        historyApiFallback: true,
+module.exports = (env, argv) => ({
+    context: path.join( __dirname, 'src' ),
+    devtool: argv.mode === 'production' ? 'none' : 'source-map',
+    entry: {
+        app: './client/index.js',
     },
-    optimization: {
-        nodeEnv: argv.mode,
-        splitChunks: {
-            chunks: 'all',
-        },
-        namedChunks: true,
-        minimizer: [
-            new OptimizeCSSAssetsPlugin({})
-        ]
+    resolve: {
+        modules: [
+            path.resolve( './src' ),
+            'node_modules',
+        ],
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader:  'babel-loader'
-                }
+                use: ['babel-loader']
             },
             {
-                test: /\.(sa|sc|c)ss$/,
-                use: [
-                  argv.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                  {
-                    loader: 'css-loader',
-                    options: {
-                    modules: true,
-                    importLoaders: 1,
-                    localIdentName: "[name]_[local]_[hash:base64:5]",
-                    }
-                  },
-                  'sass-loader'
-                ]
-            }
-          
-        ]
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                loader: ['babel-loader', 'eslint-loader'],
+            },
+        ],
+    },
+    output: {
+        path: path.resolve( __dirname, 'dist' ),
+        filename: '[name].bundle.js',
     },
     plugins: [
-        htmlPlugin,
-        miniCssPlugin,
-        new CleanWebpackPlugin(['dist']),
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'disabled',
-            generateStatsFile: true,
-            statsOptions: { source: false }
+        new BundleAnalyzerPlugin( {
+            analyzerMode: 'static',
+            reportFilename: 'webpack-report.html',
+            openAnalyzer: false,
         }),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename:  argv.mode === 'development' ? '[name].css' : '[name].[hash].css',
+            chunkFilename:  argv.mode === 'development'? '[id].css' : '[id].[hash].css',
+          })
     ]
-  }
-}
+});

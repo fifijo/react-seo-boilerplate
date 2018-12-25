@@ -1,18 +1,23 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import Meta from '../components/Header/Meta/Meta'
+import PropTypes from 'prop-types'
 
-const defaultLayout = ({ 
+const AppRoute = ({ 
   component: Component, 
   layout: Layout, 
   ...rest 
 }) => (
   <Route {...rest} render={props => (
     <Layout>
-      <Meta title={rest.title} />
       <Component {...props} />
     </Layout>
   )} />
 )
 
-export default defaultLayout
+AppRoute.propTypes = {
+  component: PropTypes.func.isRequired,
+  layout: PropTypes.func.isRequired,
+  rest: PropTypes.func
+};
+
+export default AppRoute
