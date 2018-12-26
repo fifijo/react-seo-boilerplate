@@ -1,7 +1,7 @@
 import Home from 'shared/pages/Home'
 import About from 'shared/pages/About'
 import Contact from 'shared/pages/Contact'
-import defaultLayout from 'shared/layouts/default'
+import defaultLayout from 'shared/layouts/Default'
 
 export default [
     {
