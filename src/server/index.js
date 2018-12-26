@@ -1,6 +1,5 @@
 import express from 'express'
 import path from 'path'
-
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter, matchPath } from 'react-router-dom'
@@ -9,6 +8,7 @@ import Helmet from 'react-helmet'
 import routes from 'shared/routes'
 import App from 'shared/components/App'
 import createStore from 'shared/store/store'
+import { ServerStyleSheet } from 'styled-components';
 
 const app = express()
 
@@ -18,33 +18,41 @@ app.get('/*', (req, res) => {
     const context = {}
     const store = createStore()
 
+    const sheet = new ServerStyleSheet();
+
     const dataRequirements =
         routes
-            .filter( route => matchPath( req.url, route ) ) // filter matching paths
-            .map( route => route.component ) // map to components
-            .filter( comp => comp.serverFetch ) // check if components have data requirement
-            .map( comp => store.dispatch( comp.serverFetch( ) ) ) // dispatch data requirement
+            .filter( route => matchPath( req.url, route ) ) 
+            .map( route => route.component )
+            .filter( comp => comp.serverFetch )
+            .map( comp => store.dispatch( comp.serverFetch( ) ) )
 
-    Promise.all( dataRequirements ).then( ( ) => {
-        const jsx = (
+    Promise.all( dataRequirements ).then( () => {
+        const jsx = sheet.collectStyles((
             <ReduxProvider store={ store }>
                 <StaticRouter context={ context } location={ req.url }>
                     <App />
                 </StaticRouter>
             </ReduxProvider>
-        );
-        const reactDom = renderToString( jsx )
-        const reduxState = store.getState( )
-        const helmetData = Helmet.renderStatic( )
+        ))
+
+        const reactDom = renderToString(jsx)
+        const reduxState = store.getState()
+        const helmetData = Helmet.renderStatic()
+        const styles = sheet.getStyleTags()
+
 
         res.writeHead( 200, { 'Content-Type': 'text/html' } )
-        res.end( htmlTemplate( reactDom, reduxState, helmetData ) )
-    } );
+        res.end( htmlTemplate( reactDom, reduxState, helmetData, styles) )
+        
+    }).catch(e => {
+        console.log('error', e)
+    });
 } );
 
 app.listen(3000);
 
-function htmlTemplate( reactDom, reduxState, helmetData ) {
+function htmlTemplate( reactDom, reduxState, helmetData, styles ) {
     return (
         `<!DOCTYPE html>
         <html>
@@ -52,6 +60,7 @@ function htmlTemplate( reactDom, reduxState, helmetData ) {
             <meta charset='utf-8'>
             ${ helmetData.title.toString( ) }
             ${ helmetData.meta.toString( ) }
+            ${styles}
             <title>React SSR Boilerplate</title>
         </head>
         
