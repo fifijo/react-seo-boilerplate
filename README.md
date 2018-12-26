@@ -4,7 +4,8 @@
 <a href="https://react-redux.js.org" target="_blank"> <img src="https://redux.js.org/img/redux.svg" height="50" /> </a> 
 <a href="https://webpack.github.io" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/webpack.svg" height="50" /></a> 
 <a href="https://babeljs.io" target="_blank"> <img src="https://raw.githubusercontent.com/babel/logo/master/babel.png" height="50" /></a> 
-<a href="http://sass-lang.com/" target="_blank"> <img src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" height="50" /> </a>
+<a href="https://www.styled-components.com"> <img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" height="50" />
+</a>
 <a href="https://eslint.org/" target="_blank"> <img src="https://eslint.org/img/logo.svg" height="50" /> </a>
 
 ## Features
@@ -13,7 +14,7 @@
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk) Thunk middleware for Redux.
 - [Webpack 4](https://webpack.js.org/) To bundle your assets, styles & scripts
 - [Babel 7](https://babeljs.io/) A compiler used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript
-- [SASS](https://sass-lang.com/) Is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- [Styled components](https://www.styled-components.com/) Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress
 - [Express](https://expressjs.com/) Fast, unopinionated, minimalist web framework for Node.js
 - [ESLint](https://eslint.org/) The pluggable linting utility for JavaScript and JSX 
 
