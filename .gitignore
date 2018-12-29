@@ -4,4 +4,6 @@ yarn-error.log*
 dist
 node_modules
 .npm
+~
+v8-compile-cache-0
 
