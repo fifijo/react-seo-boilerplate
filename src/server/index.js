@@ -3,7 +3,7 @@ import path from 'path'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter, matchPath } from 'react-router-dom'
-import { Provider as ReduxProvider } from 'react-redux'
+import { Provider } from 'react-redux'
 import Helmet from 'react-helmet'
 import routes from 'shared/routes'
 import App from 'shared/components/App'
@@ -29,11 +29,11 @@ app.get('/*', (req, res) => {
 
     Promise.all( dataRequirements ).then( () => {
         const jsx = sheet.collectStyles((
-            <ReduxProvider store={ store }>
+            <Provider store={ store }>
                 <StaticRouter context={ context } location={ req.url }>
                     <App />
                 </StaticRouter>
-            </ReduxProvider>
+            </Provider>
         ))
 
         const reactDom = renderToString(jsx)

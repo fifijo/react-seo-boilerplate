@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Provider as ReduxProvider } from 'react-redux'
+import { Provider } from 'react-redux'
 
 import App from 'shared/components/App'
 import createStore from 'shared/store/store'
@@ -9,11 +9,11 @@ import createStore from 'shared/store/store'
 const store = createStore(window.REDUX_DATA)
 
 const jsx = (
-    <ReduxProvider store={store}>
+    <Provider store={store}>
         <Router>
             <App />
         </Router>
-    </ReduxProvider>
+    </Provider>
 );
 
 const app = document.getElementById('app')
