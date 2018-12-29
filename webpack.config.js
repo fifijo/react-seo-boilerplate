@@ -21,10 +21,10 @@ module.exports = (env, argv) => ({
         filename: '[name].bundle.js',
     },
     plugins: [
-        // new BundleAnalyzerPlugin( {
-        //     analyzerMode: 'static',
-        //     reportFilename: 'webpack-report.html',
-        //     openAnalyzer: false,
-        // }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            reportFilename: 'webpack-report.html',
+            openAnalyzer: false,
+        }),
     ]
 });

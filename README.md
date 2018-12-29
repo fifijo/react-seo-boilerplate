@@ -1,4 +1,4 @@
-# React SSR Boilerplate
+# React Server Side Rendering Boilerplate - seo friendly
 
 <a href="https://facebook.github.io/react/" target="_blank"> <img src="https://cdn.worldvectorlogo.com/logos/react.svg" height="50" /></a>
 <a href="https://react-redux.js.org" target="_blank"> <img src="https://redux.js.org/img/redux.svg" height="50" /> </a> 
@@ -16,7 +16,8 @@
 - [Babel 7](https://babeljs.io/) A compiler used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript
 - [Styled components](https://www.styled-components.com/) Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress
 - [Express](https://expressjs.com/) Fast, unopinionated, minimalist web framework for Node.js
-- [ESLint](https://eslint.org/) The pluggable linting utility for JavaScript and JSX 
+- [ESLint](https://eslint.org/) The pluggable linting utility for JavaScript and JSX
+- Helmet, isomorphic-fetch and more 
 
 ## Usage
 
