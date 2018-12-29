@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 
 import { connect } from 'react-redux'
 import { fetchData } from 'shared/store/store'
 
 class Home extends Component {
+
     componentDidMount( ) {
         if (this.props.data.length <= 0) {
             this.props.fetchData()
@@ -15,13 +17,17 @@ class Home extends Component {
         const { data } = this.props
 
         return (
-            <div>
+            <Fragment>
+            <Helmet>
+                <title>Home Page</title>
+                <meta name='description' content='This is a proof of concept for React SSR' />
+            </Helmet>
                 <ul>
                     { data.map( ( { circuitId, circuitName, Location } ) => (
                         <li key={ circuitId } >{ circuitName } - { Location.locality }, { Location.country }</li>
                     ) ) }
                 </ul>
-            </div>
+            </Fragment>
         );
     }
 }
