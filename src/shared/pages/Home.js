@@ -1,16 +1,14 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import { connect } from 'react-redux'
-import { fetchData } from 'shared/store/store'
+
+import { fetchData } from 'shared/state/actions/circuits'
 
 class Home extends Component {
 
     componentDidMount( ) {
-        if (this.props.data.length <= 0) {
-            this.props.fetchData()
-        }
+        (this.props.data.length <= 0) ? this.props.fetchData() : ''
     }
 
     render() {
@@ -20,7 +18,6 @@ class Home extends Component {
             <Fragment>
             <Helmet>
                 <title>Home Page</title>
-                <meta name='description' content='This is a proof of concept for React SSR' />
             </Helmet>
                 <ul>
                     { data.map( ( { circuitId, circuitName, Location } ) => (
@@ -33,18 +30,18 @@ class Home extends Component {
 }
 
 Home.propTypes = {
-    fetchData: PropTypes.func,
-    data: PropTypes.array
+   fetchData: PropTypes.func,
+   data: PropTypes.array
 };
 
 Home.serverFetch = fetchData
 
 const mapStateToProps = (state) => ({
-    data: state.data,
+   data: state.circuits.data
 });
 
 const mapDispatchToProps = {
-    fetchData,
+    fetchData
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

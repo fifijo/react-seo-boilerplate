@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 import App from 'shared/components/App'
-import createStore from 'shared/store/store'
+import createStore from 'shared/state'
 
 const store = createStore(window.REDUX_DATA)
 
