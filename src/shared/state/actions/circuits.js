@@ -4,7 +4,7 @@ import {
     GET_CIRCUIT_FAILURE 
 } from 'shared/state/types'
 
-import { fetchCircuits } from 'shared/api'
+import { fetchCircuits } from 'shared/services/api'
 
 export const fetchData = () => {
     return async dispatch => {
