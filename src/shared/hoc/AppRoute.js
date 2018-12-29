@@ -18,6 +18,8 @@ AppRoute.propTypes = {
   component: PropTypes.func.isRequired,
   layout: PropTypes.func.isRequired,
   rest: PropTypes.func
-};
+}
+
+AppRoute.displayName = 'AppRoute'
 
 export default AppRoute

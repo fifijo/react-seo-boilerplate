@@ -7,8 +7,10 @@ const defaultLayout = props => (
   </Fragment>
 )
 
+defaultLayout.displayName = 'defaultLayout'
+
 defaultLayout.propTypes = {
   children: PropTypes.node.isRequired
-};
+}
 
 export default defaultLayout

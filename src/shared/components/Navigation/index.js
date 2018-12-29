@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { NavLink  } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const StyledNavLink = styled(NavLink)`
@@ -21,5 +21,7 @@ const Navigation = () => (
         <StyledNavLink to='/contact'>Contact</StyledNavLink>
     </Fragment>
 )
+
+Navigation.displayName = 'Navigation'
 
 export default Navigation

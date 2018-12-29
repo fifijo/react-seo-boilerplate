@@ -8,6 +8,8 @@ const Contact = () => (
         </Helmet>
         <h2>This is the contact page</h2>
     </Fragment>
-);
+)
+
+Contact.displayName = 'Contact'
 
 export default Contact

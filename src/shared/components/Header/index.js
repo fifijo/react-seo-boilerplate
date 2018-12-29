@@ -14,4 +14,6 @@ const Header = () => (
     </HeaderContainer>
 )
 
+Header.displayName = 'Header'
+
 export default Header

@@ -17,4 +17,6 @@ const Layout = () => (
     </Fragment>
 )
 
+Layout.displayName = 'App'
+
 export default Layout

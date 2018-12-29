@@ -8,6 +8,8 @@ const About = () => (
         </Helmet>
         <h2>This is the about page</h2>
     </Fragment>
-);
+)
+
+About.displayName = 'About'
 
 export default About
