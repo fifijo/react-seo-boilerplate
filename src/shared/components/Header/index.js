@@ -1,20 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Navigation from 'shared/components/Navigation'
 
-const AppContainer = styled.div`
+const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(20deg, rgb(219, 112, 147), #daa357);
 `;
 
 const Header = () => (
-    <AppContainer>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/contact'>Contact</Link>
-    </AppContainer>
+    <HeaderContainer>
+       <Navigation/>
+    </HeaderContainer>
 )
 
 export default Header
