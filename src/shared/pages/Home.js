@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import Helmet from 'react-helmet'
-import { fetchData } from 'shared/state/actions/circuits'
+import { fetchData } from 'shared/state/actions/posts'
 import withLoading from 'shared/hoc/withLoading'
 
 class Home extends PureComponent {
@@ -19,9 +19,10 @@ class Home extends PureComponent {
                 <Helmet>
                     <title>Home Page</title>
                 </Helmet>
+                <h2>This is the home page filled with fake data</h2>
                 <ul>
-                    { data.map( ( { circuitId, circuitName, Location } ) => (
-                        <li key={ circuitId } >{ circuitName } - { Location.locality }, { Location.country }</li>
+                    { data.map( ( { id, title, body } ) => (
+                        <li key={ id } >{ title } - { body }</li>
                     ) ) }
                 </ul>
             </Fragment>
@@ -41,9 +42,9 @@ Home.propTypes = {
 Home.serverFetch = fetchData
 
 const mapStateToProps = (state) => ({
-   data: state.circuits.data,
-   isLoading: state.circuits.isLoading,
-   hasError: state.circuits.hasError
+   data: state.posts.data,
+   isLoading: state.posts.isLoading,
+   hasError: state.posts.hasError
 })
 
 const mapDispatchToProps = {

@@ -8,7 +8,7 @@ import Helmet from 'react-helmet'
 import routes from 'shared/routes'
 import App from 'shared/components/App'
 import createStore from 'shared/state'
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet } from 'styled-components'
 
 const app = express()
 

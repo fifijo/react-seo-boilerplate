@@ -1,37 +1,37 @@
 import { 
-  GET_CIRCUIT_BEGIN, 
-  GET_CIRCUIT_REQUEST, 
-  GET_CIRCUIT_FAILURE 
+  GET_POSTS_BEGIN, 
+  GET_POSTS_REQUEST, 
+  GET_POSTS_FAILURE 
 } from 'shared/state/types'
 
 const defaultState = {
   data: [],
   isLoading: false,
-  hasError: false
+  hasError: null
 }
 
-export default function circuitsReducer(state = defaultState, action) {
+export default function postsReducer(state = defaultState, action) {
   
   switch (action.type) {
-      case GET_CIRCUIT_BEGIN:
+      case GET_POSTS_BEGIN:
         return {
           ...state,
           isLoading: true,
           hasError: false
       }
 
-      case GET_CIRCUIT_REQUEST:
+      case GET_POSTS_REQUEST:
         return { 
           ...state,
           isLoading: false,
           data: action.payload
         }
 
-      case GET_CIRCUIT_FAILURE:
+      case GET_POSTS_FAILURE:
         return {
           ...state,
           isLoading: false,
-          hasError: action.payload.error,
+          hasError: action.payload,
           data: []
         }
 
