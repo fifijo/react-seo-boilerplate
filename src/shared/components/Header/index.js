@@ -9,9 +9,9 @@ const HeaderContainer = styled.div`
 `;
 
 const Header = () => (
-    <HeaderContainer>
-       <Navigation/>
-    </HeaderContainer>
+  <HeaderContainer>
+    <Navigation/>
+  </HeaderContainer>
 )
 
 Header.displayName = 'Header'

@@ -15,11 +15,11 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const Navigation = () => (
-    <Fragment>
-        <StyledNavLink exact to='/'>Home</StyledNavLink>
-        <StyledNavLink to='/about'>About</StyledNavLink>
-        <StyledNavLink to='/contact'>Contact</StyledNavLink>
-    </Fragment>
+  <Fragment>
+    <StyledNavLink exact to='/'>Home</StyledNavLink>
+    <StyledNavLink to='/about'>About</StyledNavLink>
+    <StyledNavLink to='/contact'>Contact</StyledNavLink>
+  </Fragment>
 )
 
 Navigation.displayName = 'Navigation'

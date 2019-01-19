@@ -9,6 +9,7 @@ import { fetchCircuits } from 'shared/services/api'
 export const fetchData = () => {
     return async dispatch => {
       dispatch({ type: GET_CIRCUIT_BEGIN })
+
       try {
         const data = await fetchCircuits()
 
@@ -18,6 +19,7 @@ export const fetchData = () => {
         })
 
       } catch (error) {
+        
         dispatch({
             type: GET_CIRCUIT_FAILURE,
             error
