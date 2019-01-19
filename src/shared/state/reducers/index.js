@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import circuits from './circuitsReducer'
+import posts from './postsReducer'
 
 export default combineReducers({ 
-  circuits 
+  posts 
 })
