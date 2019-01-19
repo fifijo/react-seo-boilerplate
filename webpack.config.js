@@ -1,9 +1,9 @@
 const path = require('path')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
-module.exports = (env, argv) => ({
+module.exports = () => ({
     context: path.join( __dirname, 'src' ),
-    devtool: argv.mode === 'production' ? 'none' : 'source-map',
+    devtool: 'inline-source-map',
+    mode: 'development',
     entry: {
         app: './client/index.js',
     },
@@ -19,12 +19,5 @@ module.exports = (env, argv) => ({
     output: {
         path: path.resolve( __dirname, 'dist' ),
         filename: '[name].bundle.js',
-    },
-    plugins: [
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            reportFilename: 'webpack-report.html',
-            openAnalyzer: false,
-        }),
-    ]
+    }
 });

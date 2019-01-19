@@ -36,7 +36,7 @@ Home.propTypes = {
    fetchData: PropTypes.func.isRequired,
    data: PropTypes.array.isRequired,
    isLoading: PropTypes.bool.isRequired,
-   hasError: PropTypes.bool.isRequired
+   hasError: PropTypes.bool
 }
 
 Home.serverFetch = fetchData
