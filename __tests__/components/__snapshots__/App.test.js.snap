@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component should mount correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <App>
+        <Header>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": true,
+                    "lastClassName": "gDyVOg",
+                    "rules": Array [
+                      "
+  display: flex;
+  align-items: center;
+  justify-content: center;
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH gDyVOg"
+              >
+                <Navigation>
+                  <Styled(NavLink)
+                    exact={true}
+                    to="/"
+                  >
+                    <StyledComponent
+                      exact={true}
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bdVaJa",
+                            "isStatic": true,
+                            "lastClassName": "hUpHLV",
+                            "rules": Array [
+                              "
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #19233b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  &.active {
+    text-decoration: underline;
+  }
+",
+                            ],
+                          },
+                          "displayName": "Styled(NavLink)",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bdVaJa",
+                          "target": [Function],
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      to="/"
+                    >
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="sc-bdVaJa hUpHLV"
+                        exact={true}
+                        to="/"
+                      >
+                        <Route
+                          exact={true}
+                          path="\\\\/"
+                        >
+                          <Link
+                            aria-current="page"
+                            className="sc-bdVaJa hUpHLV active"
+                            replace={false}
+                            style={Object {}}
+                            to="/"
+                          >
+                            <a
+                              aria-current="page"
+                              className="sc-bdVaJa hUpHLV active"
+                              href="/"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              Home
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
+                    </StyledComponent>
+                  </Styled(NavLink)>
+                  <Styled(NavLink)
+                    to="/about"
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bdVaJa",
+                            "isStatic": true,
+                            "lastClassName": "hUpHLV",
+                            "rules": Array [
+                              "
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #19233b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  &.active {
+    text-decoration: underline;
+  }
+",
+                            ],
+                          },
+                          "displayName": "Styled(NavLink)",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bdVaJa",
+                          "target": [Function],
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      to="/about"
+                    >
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="sc-bdVaJa hUpHLV"
+                        to="/about"
+                      >
+                        <Route
+                          path="\\\\/about"
+                        >
+                          <Link
+                            aria-current={null}
+                            className="sc-bdVaJa hUpHLV"
+                            replace={false}
+                            to="/about"
+                          >
+                            <a
+                              aria-current={null}
+                              className="sc-bdVaJa hUpHLV"
+                              href="/about"
+                              onClick={[Function]}
+                            >
+                              About
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
+                    </StyledComponent>
+                  </Styled(NavLink)>
+                  <Styled(NavLink)
+                    to="/contact"
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bdVaJa",
+                            "isStatic": true,
+                            "lastClassName": "hUpHLV",
+                            "rules": Array [
+                              "
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #19233b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  &.active {
+    text-decoration: underline;
+  }
+",
+                            ],
+                          },
+                          "displayName": "Styled(NavLink)",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bdVaJa",
+                          "target": [Function],
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      to="/contact"
+                    >
+                      <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        className="sc-bdVaJa hUpHLV"
+                        to="/contact"
+                      >
+                        <Route
+                          path="\\\\/contact"
+                        >
+                          <Link
+                            aria-current={null}
+                            className="sc-bdVaJa hUpHLV"
+                            replace={false}
+                            to="/contact"
+                          >
+                            <a
+                              aria-current={null}
+                              className="sc-bdVaJa hUpHLV"
+                              href="/contact"
+                              onClick={[Function]}
+                            >
+                              Contact
+                            </a>
+                          </Link>
+                        </Route>
+                      </NavLink>
+                    </StyledComponent>
+                  </Styled(NavLink)>
+                </Navigation>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </Header>
+        <Switch>
+          <AppRoute
+            component={[Function]}
+            computedMatch={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            exact={true}
+            key="/"
+            layout={[Function]}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            path="/"
+          >
+            <Route
+              computedMatch={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              exact={true}
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              path="/"
+              render={[Function]}
+            >
+              <defaultLayout>
+                <Connect(Home)
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "createHref": [Function],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <Home
+                    data={Array []}
+                    fetchData={[Function]}
+                    hasError={false}
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "createHref": [Function],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    isLoading={true}
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                  >
+                    <HelmetWrapper
+                      defer={true}
+                      encodeSpecialCharacters={true}
+                    >
+                      <SideEffect(NullComponent)
+                        defer={true}
+                        encodeSpecialCharacters={true}
+                        title="Home Page"
+                        titleAttributes={Object {}}
+                      >
+                        <NullComponent
+                          defer={true}
+                          encodeSpecialCharacters={true}
+                          title="Home Page"
+                          titleAttributes={Object {}}
+                        />
+                      </SideEffect(NullComponent)>
+                    </HelmetWrapper>
+                    <h2>
+                      This is the home page filled with fake data
+                    </h2>
+                    <ul />
+                  </Home>
+                </Connect(Home)>
+              </defaultLayout>
+            </Route>
+          </AppRoute>
+        </Switch>
+      </App>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`App component should render correctly 1`] = `
+Array [
+  <div
+    class="sc-bwzfXH gDyVOg"
+  >
+    <a
+      aria-current="page"
+      class="sc-bdVaJa hUpHLV active"
+      href="/"
+    >
+      Home
+    </a>
+    <a
+      class="sc-bdVaJa hUpHLV"
+      href="/about"
+    >
+      About
+    </a>
+    <a
+      class="sc-bdVaJa hUpHLV"
+      href="/contact"
+    >
+      Contact
+    </a>
+  </div>,
+  <h2>
+    This is the home page filled with fake data
+  </h2>,
+  <ul />,
+]
+`;
+
+exports[`App component should shallow correctly 1`] = `
+<Fragment>
+  <Header />
+  <Switch>
+    <AppRoute
+      component={[Function]}
+      exact={true}
+      key="/"
+      layout={[Function]}
+      path="/"
+    />
+    <AppRoute
+      component={[Function]}
+      exact={true}
+      key="/about"
+      layout={[Function]}
+      path="/about"
+    />
+    <AppRoute
+      component={[Function]}
+      exact={true}
+      key="/contact"
+      layout={[Function]}
+      path="/contact"
+    />
+  </Switch>
+</Fragment>
+`;

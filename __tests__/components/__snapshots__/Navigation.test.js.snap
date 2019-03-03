@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component should mount correctly 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Navigation>
+      <Styled(NavLink)
+        exact={true}
+        to="/"
+      >
+        <StyledComponent
+          exact={true}
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bdVaJa",
+                "isStatic": true,
+                "lastClassName": "hUpHLV",
+                "rules": Array [
+                  "
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #19233b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  &.active {
+    text-decoration: underline;
+  }
+",
+                ],
+              },
+              "displayName": "Styled(NavLink)",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bdVaJa",
+              "target": [Function],
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          to="/"
+        >
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="sc-bdVaJa hUpHLV"
+            exact={true}
+            to="/"
+          >
+            <Route
+              exact={true}
+              path="\\\\/"
+            >
+              <Link
+                aria-current="page"
+                className="sc-bdVaJa hUpHLV active"
+                replace={false}
+                style={Object {}}
+                to="/"
+              >
+                <a
+                  aria-current="page"
+                  className="sc-bdVaJa hUpHLV active"
+                  href="/"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  Home
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+        </StyledComponent>
+      </Styled(NavLink)>
+      <Styled(NavLink)
+        to="/about"
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bdVaJa",
+                "isStatic": true,
+                "lastClassName": "hUpHLV",
+                "rules": Array [
+                  "
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #19233b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  &.active {
+    text-decoration: underline;
+  }
+",
+                ],
+              },
+              "displayName": "Styled(NavLink)",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bdVaJa",
+              "target": [Function],
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          to="/about"
+        >
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="sc-bdVaJa hUpHLV"
+            to="/about"
+          >
+            <Route
+              path="\\\\/about"
+            >
+              <Link
+                aria-current={null}
+                className="sc-bdVaJa hUpHLV"
+                replace={false}
+                to="/about"
+              >
+                <a
+                  aria-current={null}
+                  className="sc-bdVaJa hUpHLV"
+                  href="/about"
+                  onClick={[Function]}
+                >
+                  About
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+        </StyledComponent>
+      </Styled(NavLink)>
+      <Styled(NavLink)
+        to="/contact"
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bdVaJa",
+                "isStatic": true,
+                "lastClassName": "hUpHLV",
+                "rules": Array [
+                  "
+  padding: 0 1rem;
+  text-decoration: none;
+  color: #19233b;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  &.active {
+    text-decoration: underline;
+  }
+",
+                ],
+              },
+              "displayName": "Styled(NavLink)",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bdVaJa",
+              "target": [Function],
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
+          to="/contact"
+        >
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            className="sc-bdVaJa hUpHLV"
+            to="/contact"
+          >
+            <Route
+              path="\\\\/contact"
+            >
+              <Link
+                aria-current={null}
+                className="sc-bdVaJa hUpHLV"
+                replace={false}
+                to="/contact"
+              >
+                <a
+                  aria-current={null}
+                  className="sc-bdVaJa hUpHLV"
+                  href="/contact"
+                  onClick={[Function]}
+                >
+                  Contact
+                </a>
+              </Link>
+            </Route>
+          </NavLink>
+        </StyledComponent>
+      </Styled(NavLink)>
+    </Navigation>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Navigation component should render correctly 1`] = `
+Array [
+  <a
+    aria-current="page"
+    class="sc-bdVaJa hUpHLV active"
+    href="/"
+  >
+    Home
+  </a>,
+  <a
+    class="sc-bdVaJa hUpHLV"
+    href="/about"
+  >
+    About
+  </a>,
+  <a
+    class="sc-bdVaJa hUpHLV"
+    href="/contact"
+  >
+    Contact
+  </a>,
+]
+`;
+
+exports[`Navigation component should shallow correctly 1`] = `
+<Fragment>
+  <Styled(NavLink)
+    exact={true}
+    to="/"
+  >
+    Home
+  </Styled(NavLink)>
+  <Styled(NavLink)
+    to="/about"
+  >
+    About
+  </Styled(NavLink)>
+  <Styled(NavLink)
+    to="/contact"
+  >
+    Contact
+  </Styled(NavLink)>
+</Fragment>
+`;
