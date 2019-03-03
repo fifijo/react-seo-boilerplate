@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page should mount correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(Home)>
+        <Home
+          data={Array []}
+          fetchData={[Function]}
+          hasError={false}
+          isLoading={true}
+        >
+          <HelmetWrapper
+            defer={true}
+            encodeSpecialCharacters={true}
+          >
+            <SideEffect(NullComponent)
+              defer={true}
+              encodeSpecialCharacters={true}
+              title="Home Page"
+              titleAttributes={Object {}}
+            >
+              <NullComponent
+                defer={true}
+                encodeSpecialCharacters={true}
+                title="Home Page"
+                titleAttributes={Object {}}
+              />
+            </SideEffect(NullComponent)>
+          </HelmetWrapper>
+          <h2>
+            This is the home page filled with fake data
+          </h2>
+          <ul />
+        </Home>
+      </Connect(Home)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`Home page should render correctly 1`] = `
+Array [
+  <h2>
+    This is the home page filled with fake data
+  </h2>,
+  <ul />,
+]
+`;
+
+exports[`Home page should shallow correctly 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

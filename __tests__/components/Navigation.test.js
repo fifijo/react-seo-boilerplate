@@ -4,23 +4,27 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Navigation from 'shared/components/Navigation'
 
 describe('Navigation component', () => {
-    test('should shallow correctly', () => {
+
+    it('should shallow correctly', () => {
         expect(shallow(
           <Navigation />
         )).toMatchSnapshot() 
     })
-    test('should mount correctly', () => {
+
+    it('should mount correctly', () => {
         expect(mount(
           <Router>
             <Navigation />
           </Router>
         )).toMatchSnapshot() 
     })
-    test('should render correctly', () => {
+
+    it('should render correctly', () => {
         expect(render(
           <Router>
             <Navigation />
           </Router>
         )).toMatchSnapshot() 
     })
+    
   })

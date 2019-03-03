@@ -2,17 +2,17 @@ import React from 'react'
 import { shallow, mount, render } from 'enzyme'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import App from 'shared/components/App'
+import Home from 'shared/pages/Home'
 
 import createStore from 'shared/state'
 
 const store = createStore(window.REDUX_DATA)
 
-describe('App component', () => {
+describe('Home page', () => {
 
     it('should shallow correctly', () => {
         expect(shallow(
-          <App />
+          <Home />
         )).toMatchSnapshot() 
     })
 
@@ -20,7 +20,7 @@ describe('App component', () => {
         expect(mount(
             <Provider store={store}>
                 <Router>
-                    <App />
+                    <Home />
                 </Router>
             </Provider>
         )).toMatchSnapshot() 
@@ -30,7 +30,7 @@ describe('App component', () => {
         expect(render(
             <Provider store={store}>
                 <Router>
-                    <App />
+                    <Home />
                 </Router>
             </Provider>
         )).toMatchSnapshot() 
