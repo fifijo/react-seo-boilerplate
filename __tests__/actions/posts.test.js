@@ -1,5 +1,5 @@
 import configureStore from 'redux-mock-store'
-import * as actions from 'shared/state/actions/posts'
+import * as actionCreators from 'shared/state/actions/posts'
 import thunk from 'redux-thunk'
 import { 
     GET_POSTS_BEGIN, 
@@ -20,32 +20,21 @@ describe('Action posts fetchData', () => {
     })
 
     it('should create begin action', () => {
-        const expectedAction = {
-            type: GET_POSTS_BEGIN,
-        }
-        expect(actions.begin()).toEqual(expectedAction);
+        expect(actionCreators.begin().type).toEqual(GET_POSTS_BEGIN);
     })
 
     it('should create request action', () => {
-        const expectedAction = {
-            type: GET_POSTS_REQUEST,
-        }
-        expect(actions.request()).toEqual(expectedAction);
+        expect(actionCreators.request().type).toEqual(GET_POSTS_REQUEST);
     })
 
-    // it('should execute fetch data', () => {
-    //     const expectedActions = [
-    //         { type: GET_POSTS_BEGIN },
-    //         { type: GET_POSTS_REQUEST,  payload: [{}] },
-    //       ];
+    it('should execute fetch data action then dispatch begin and request', () => {
+        const store = mockStore({})
+        const actions = store.getActions()
 
-    //     const store = mockStore({ payload: [{}]})
-    //     return (
-    //         store.dispatch(actions.fetchData()).then(() => {
-    //           expect(store.getActions()).toEqual(expectedActions);
-    //         })
-    //     );
-
-    // })
-
+        return store.dispatch(actionCreators.fetchData())
+            .then(() => {
+                expect(actions[0].type).toEqual(GET_POSTS_BEGIN)
+                expect(actions[1].type).toEqual(GET_POSTS_REQUEST)
+            })
+    })
   })
