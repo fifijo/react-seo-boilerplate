@@ -45,7 +45,7 @@ exports[`App component should mount correctly 1`] = `
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "gDyVOg",
                     "rules": Array [
                       "
@@ -83,7 +83,7 @@ exports[`App component should mount correctly 1`] = `
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bdVaJa",
-                            "isStatic": true,
+                            "isStatic": false,
                             "lastClassName": "hUpHLV",
                             "rules": Array [
                               "
@@ -101,9 +101,45 @@ exports[`App component should mount correctly 1`] = `
                           },
                           "displayName": "Styled(NavLink)",
                           "foldedComponentIds": Array [],
+                          "propTypes": Object {
+                            "activeClassName": [Function],
+                            "activeStyle": [Function],
+                            "aria-current": [Function],
+                            "className": [Function],
+                            "exact": [Function],
+                            "innerRef": [Function],
+                            "isActive": [Function],
+                            "location": [Function],
+                            "onClick": [Function],
+                            "replace": [Function],
+                            "strict": [Function],
+                            "style": [Function],
+                            "target": [Function],
+                            "to": [Function],
+                          },
                           "render": [Function],
                           "styledComponentId": "sc-bdVaJa",
-                          "target": [Function],
+                          "target": Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "NavLink",
+                            "propTypes": Object {
+                              "activeClassName": [Function],
+                              "activeStyle": [Function],
+                              "aria-current": [Function],
+                              "className": [Function],
+                              "exact": [Function],
+                              "innerRef": [Function],
+                              "isActive": [Function],
+                              "location": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "strict": [Function],
+                              "style": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          },
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
@@ -113,22 +149,29 @@ exports[`App component should mount correctly 1`] = `
                       to="/"
                     >
                       <NavLink
-                        activeClassName="active"
-                        aria-current="page"
                         className="sc-bdVaJa hUpHLV"
                         exact={true}
                         to="/"
                       >
-                        <Route
-                          exact={true}
-                          path="\\\\/"
+                        <Link
+                          aria-current="page"
+                          className="sc-bdVaJa hUpHLV active"
+                          style={Object {}}
+                          to={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": null,
+                            }
+                          }
                         >
-                          <Link
+                          <LinkAnchor
                             aria-current="page"
                             className="sc-bdVaJa hUpHLV active"
-                            replace={false}
+                            href="/"
+                            navigate={[Function]}
                             style={Object {}}
-                            to="/"
                           >
                             <a
                               aria-current="page"
@@ -139,8 +182,8 @@ exports[`App component should mount correctly 1`] = `
                             >
                               Home
                             </a>
-                          </Link>
-                        </Route>
+                          </LinkAnchor>
+                        </Link>
                       </NavLink>
                     </StyledComponent>
                   </Styled(NavLink)>
@@ -154,7 +197,7 @@ exports[`App component should mount correctly 1`] = `
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bdVaJa",
-                            "isStatic": true,
+                            "isStatic": false,
                             "lastClassName": "hUpHLV",
                             "rules": Array [
                               "
@@ -172,9 +215,45 @@ exports[`App component should mount correctly 1`] = `
                           },
                           "displayName": "Styled(NavLink)",
                           "foldedComponentIds": Array [],
+                          "propTypes": Object {
+                            "activeClassName": [Function],
+                            "activeStyle": [Function],
+                            "aria-current": [Function],
+                            "className": [Function],
+                            "exact": [Function],
+                            "innerRef": [Function],
+                            "isActive": [Function],
+                            "location": [Function],
+                            "onClick": [Function],
+                            "replace": [Function],
+                            "strict": [Function],
+                            "style": [Function],
+                            "target": [Function],
+                            "to": [Function],
+                          },
                           "render": [Function],
                           "styledComponentId": "sc-bdVaJa",
-                          "target": [Function],
+                          "target": Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "NavLink",
+                            "propTypes": Object {
+                              "activeClassName": [Function],
+                              "activeStyle": [Function],
+                              "aria-current": [Function],
+                              "className": [Function],
+                              "exact": [Function],
+                              "innerRef": [Function],
+                              "isActive": [Function],
+                              "location": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "strict": [Function],
+                              "style": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          },
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
@@ -184,19 +263,26 @@ exports[`App component should mount correctly 1`] = `
                       to="/about"
                     >
                       <NavLink
-                        activeClassName="active"
-                        aria-current="page"
                         className="sc-bdVaJa hUpHLV"
                         to="/about"
                       >
-                        <Route
-                          path="\\\\/about"
+                        <Link
+                          aria-current={null}
+                          className="sc-bdVaJa hUpHLV"
+                          to={
+                            Object {
+                              "hash": "",
+                              "pathname": "/about",
+                              "search": "",
+                              "state": null,
+                            }
+                          }
                         >
-                          <Link
+                          <LinkAnchor
                             aria-current={null}
                             className="sc-bdVaJa hUpHLV"
-                            replace={false}
-                            to="/about"
+                            href="/about"
+                            navigate={[Function]}
                           >
                             <a
                               aria-current={null}
@@ -206,8 +292,8 @@ exports[`App component should mount correctly 1`] = `
                             >
                               About
                             </a>
-                          </Link>
-                        </Route>
+                          </LinkAnchor>
+                        </Link>
                       </NavLink>
                     </StyledComponent>
                   </Styled(NavLink)>
@@ -221,7 +307,7 @@ exports[`App component should mount correctly 1`] = `
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bdVaJa",
-                            "isStatic": true,
+                            "isStatic": false,
                             "lastClassName": "hUpHLV",
                             "rules": Array [
                               "
@@ -239,9 +325,45 @@ exports[`App component should mount correctly 1`] = `
                           },
                           "displayName": "Styled(NavLink)",
                           "foldedComponentIds": Array [],
+                          "propTypes": Object {
+                            "activeClassName": [Function],
+                            "activeStyle": [Function],
+                            "aria-current": [Function],
+                            "className": [Function],
+                            "exact": [Function],
+                            "innerRef": [Function],
+                            "isActive": [Function],
+                            "location": [Function],
+                            "onClick": [Function],
+                            "replace": [Function],
+                            "strict": [Function],
+                            "style": [Function],
+                            "target": [Function],
+                            "to": [Function],
+                          },
                           "render": [Function],
                           "styledComponentId": "sc-bdVaJa",
-                          "target": [Function],
+                          "target": Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "displayName": "NavLink",
+                            "propTypes": Object {
+                              "activeClassName": [Function],
+                              "activeStyle": [Function],
+                              "aria-current": [Function],
+                              "className": [Function],
+                              "exact": [Function],
+                              "innerRef": [Function],
+                              "isActive": [Function],
+                              "location": [Function],
+                              "onClick": [Function],
+                              "replace": [Function],
+                              "strict": [Function],
+                              "style": [Function],
+                              "target": [Function],
+                              "to": [Function],
+                            },
+                            "render": [Function],
+                          },
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
                           "withComponent": [Function],
@@ -251,19 +373,26 @@ exports[`App component should mount correctly 1`] = `
                       to="/contact"
                     >
                       <NavLink
-                        activeClassName="active"
-                        aria-current="page"
                         className="sc-bdVaJa hUpHLV"
                         to="/contact"
                       >
-                        <Route
-                          path="\\\\/contact"
+                        <Link
+                          aria-current={null}
+                          className="sc-bdVaJa hUpHLV"
+                          to={
+                            Object {
+                              "hash": "",
+                              "pathname": "/contact",
+                              "search": "",
+                              "state": null,
+                            }
+                          }
                         >
-                          <Link
+                          <LinkAnchor
                             aria-current={null}
                             className="sc-bdVaJa hUpHLV"
-                            replace={false}
-                            to="/contact"
+                            href="/contact"
+                            navigate={[Function]}
                           >
                             <a
                               aria-current={null}
@@ -273,8 +402,8 @@ exports[`App component should mount correctly 1`] = `
                             >
                               Contact
                             </a>
-                          </Link>
-                        </Route>
+                          </LinkAnchor>
+                        </Link>
                       </NavLink>
                     </StyledComponent>
                   </Styled(NavLink)>
@@ -285,7 +414,16 @@ exports[`App component should mount correctly 1`] = `
         </Header>
         <Switch>
           <AppRoute
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(Home)",
+                "serverFetch": [Function],
+                "type": [Function],
+              }
+            }
             computedMatch={
               Object {
                 "isExact": true,
@@ -473,33 +611,4 @@ Array [
   </h2>,
   <ul />,
 ]
-`;
-
-exports[`App component should shallow correctly 1`] = `
-<Fragment>
-  <Header />
-  <Switch>
-    <AppRoute
-      component={[Function]}
-      exact={true}
-      key="/"
-      layout={[Function]}
-      path="/"
-    />
-    <AppRoute
-      component={[Function]}
-      exact={true}
-      key="/about"
-      layout={[Function]}
-      path="/about"
-    />
-    <AppRoute
-      component={[Function]}
-      exact={true}
-      key="/contact"
-      layout={[Function]}
-      path="/contact"
-    />
-  </Switch>
-</Fragment>
 `;

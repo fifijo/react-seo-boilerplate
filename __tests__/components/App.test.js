@@ -10,12 +10,6 @@ const store = createStore(window.REDUX_DATA)
 
 describe('App component', () => {
 
-    it('should shallow correctly', () => {
-        expect(shallow(
-          <App />
-        )).toMatchSnapshot() 
-    })
-
     it('should mount correctly', () => {
         expect(mount(
             <Provider store={store}>

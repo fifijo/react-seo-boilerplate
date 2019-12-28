@@ -15,7 +15,7 @@ const AppRoute = ({
 )
 
 AppRoute.propTypes = {
-  component: PropTypes.func.isRequired,
+  component: PropTypes.object.isRequired,
   layout: PropTypes.func.isRequired,
   rest: PropTypes.func
 }

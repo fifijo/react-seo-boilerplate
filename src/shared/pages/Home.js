@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 
 import Helmet from 'react-helmet'
 import { fetchData } from 'shared/state/actions/posts'
-// import withLoading from 'shared/hoc/withLoading'
 
 class Home extends PureComponent {
     componentDidMount( ) {

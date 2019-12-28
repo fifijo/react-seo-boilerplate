@@ -79,9 +79,3 @@ Array [
   <ul />,
 ]
 `;
-
-exports[`Home page should shallow correctly 1`] = `
-<ContextConsumer>
-  <Component />
-</ContextConsumer>
-`;
