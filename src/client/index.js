@@ -9,12 +9,12 @@ import createStore from 'shared/state'
 const store = createStore(window.REDUX_DATA)
 
 const jsx = (
-    <Provider store={store}>
-        <Router>
-            <App />
-        </Router>
-    </Provider>
-);
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>
+)
 
 const app = document.getElementById('app')
 ReactDOM.hydrate(jsx, app)

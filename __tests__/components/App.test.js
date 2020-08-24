@@ -9,25 +9,27 @@ import createStore from 'shared/state'
 const store = createStore(window.REDUX_DATA)
 
 describe('App component', () => {
-
-    it('should mount correctly', () => {
-        expect(mount(
-            <Provider store={store}>
-                <Router>
-                    <App />
-                </Router>
-            </Provider>
-        )).toMatchSnapshot() 
-    })
-
-    it('should render correctly', () => {
-        expect(render(
-            <Provider store={store}>
-                <Router>
-                    <App />
-                </Router>
-            </Provider>
-        )).toMatchSnapshot() 
-    })
-    
+  it('should mount correctly', () => {
+    expect(
+      mount(
+        <Provider store={store}>
+          <Router>
+            <App />
+          </Router>
+        </Provider>
+      )
+    ).toMatchSnapshot()
   })
+
+  it('should render correctly', () => {
+    expect(
+      render(
+        <Provider store={store}>
+          <Router>
+            <App />
+          </Router>
+        </Provider>
+      )
+    ).toMatchSnapshot()
+  })
+})

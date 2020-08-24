@@ -6,11 +6,11 @@ const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const Header = () => (
   <HeaderContainer>
-    <Navigation/>
+    <Navigation />
   </HeaderContainer>
 )
 

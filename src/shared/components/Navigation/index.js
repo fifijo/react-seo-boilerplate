@@ -12,13 +12,15 @@ const StyledNavLink = styled(NavLink)`
   &.active {
     text-decoration: underline;
   }
-`;
+`
 
 const Navigation = () => (
   <Fragment>
-    <StyledNavLink exact to='/'>Home</StyledNavLink>
-    <StyledNavLink to='/about'>About</StyledNavLink>
-    <StyledNavLink to='/contact'>Contact</StyledNavLink>
+    <StyledNavLink exact to="/">
+      Home
+    </StyledNavLink>
+    <StyledNavLink to="/about">About</StyledNavLink>
+    <StyledNavLink to="/contact">Contact</StyledNavLink>
   </Fragment>
 )
 

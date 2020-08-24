@@ -1,11 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-const defaultLayout = props => (
-  <Fragment>
-    {props.children}
-  </Fragment>
-)
+const defaultLayout = props => <Fragment>{props.children}</Fragment>
 
 defaultLayout.displayName = 'defaultLayout'
 
