@@ -44,9 +44,6 @@ app.get('/*', (req, res) => {
       res.writeHead(200, { 'Content-Type': 'text/html' })
       res.end(htmlTemplate(reactDom, reduxState, helmetData, styles))
     })
-    .catch(e => {
-      console.log('error', e)
-    })
 })
 
 app.listen(3000)
