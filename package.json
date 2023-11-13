@@ -64,7 +64,7 @@
     "path": "0.12.7",
     "prettier": "^2.1.0",
     "prettier-eslint-cli": "^5.0.0",
-    "redux-devtools-extension": "2.13.8",
+    "redux-devtools-extension": "2.13.9",
     "redux-mock-store": "1.5.4",
     "uuid": "^8.3.0",
     "webpack": "4.44.1",
